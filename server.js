@@ -7,11 +7,8 @@ const port = 8000;
 // the build folder
 app.use(express.static(path.join(__dirname, "/")));
 // Send html on '/'path
-app.get("/sandbox", (req, res) => {
-  res.sendFile(path.join(__dirname, +"./sandbox/index.html"));
-});
-app.get("/duy-demo", (req, res) => {
-  res.sendFile(path.join(__dirname, +"./duy-demo/index.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, +"/index.html"));
 });
 // Create the server and listen on port
 http.createServer(app).listen(port, () => {
